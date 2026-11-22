@@ -191,12 +191,12 @@ namespace MyGarminProject.ViewModels
 
         private void ValidateForm()
         {
-            bool isUsernameValid = !string.IsNullOrWhiteSpace(SignInUsername);
+            //bool isUsernameValid = !string.IsNullOrWhiteSpace(SignInUsername);
             bool isEmailValid = !string.IsNullOrWhiteSpace(SignInEmail) &&
                                 Regex.IsMatch(SignInEmail, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
             bool isPasswordValid = !string.IsNullOrEmpty(SignInPassword);
 
-            IsSignInButtonEnabled = isUsernameValid && isEmailValid && isPasswordValid;
+            IsSignInButtonEnabled = isEmailValid && isPasswordValid; //isUsernameValid
         }
 
         private void OnSignInButtonClicked()

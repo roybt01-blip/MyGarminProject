@@ -6,6 +6,14 @@
              x:DataType="views:SignInViewModel"
              Title="SignIn">
     
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Offset="0.0" Color="#004FF9"/>
+            <GradientStop Offset="1.0" Color="#FFF94C"/>
+        </LinearGradientBrush>
+        
+    </ContentPage.Background>
+    
     <ScrollView>
 
         <Grid RowDefinitions="* ,Auto, Auto, *"
@@ -13,7 +21,7 @@
           RowSpacing="24"
           MaximumWidthRequest="450">
 
-            <VerticalStackLayout Grid.Row="1" Spacing="8">
+            <VerticalStackLayout Grid.Row="1" Spacing="8" HorizontalOptions="Center" VerticalOptions="Center">
 
                 <Label Text="Welcom back"
                    FontSize="32"
@@ -26,28 +34,29 @@
 
             <VerticalStackLayout Grid.Row="2" Spacing="16">
 
-                <VerticalStackLayout Spacing="6">
+                <!--<VerticalStackLayout Spacing="6">
                     
                     <Label Text="Username"
                        FontSize="14"
                        FontAttributes="Bold"
                        TextColor="{AppThemeBinding Light=#666666, Dark=#A0A0A0}"/>
 
-                    <Border StrokeShape="RoundRectangle 12"
+                    <Border Margin="0,0,0,10"
+                        StrokeShape="RoundRectangle 12"
                         Stroke="{AppThemeBinding Light=#E0E0E0, Dark=#333333}"
                         StrokeThickness="1"
                         BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1E1E1E}"
                         Padding="14,4">
 
-                        <Entry Placeholder="Enter your Username"
+                        <Entry ReturnType="Go"
+                           Placeholder="Enter your Username"
                            Text="{Binding SignInUsername}"
-                           BackgroundColor="Transparent"
                            ClearButtonVisibility="WhileEditing"
                            TextColor="{AppThemeBinding Light=#000000, Dark=#FFFFFF}"
                            PlaceholderColor="#888888"/>
                     </Border>
                     
-                </VerticalStackLayout> 
+                </VerticalStackLayout>--> 
                 
                 <VerticalStackLayout Spacing="6">
 
@@ -56,7 +65,8 @@
                        FontAttributes="Bold"
                        TextColor="{AppThemeBinding Light=#666666, Dark=#A0A0A0}"/>
 
-                    <Border StrokeShape="RoundRectangle 12"
+                    <Border Margin="0,0,0,10" 
+                        StrokeShape="RoundRectangle 12"
                         Stroke="{AppThemeBinding Light=#E0E0E0, Dark=#333333}"
                         StrokeThickness="1"
                         BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1E1E1E}"
@@ -64,7 +74,6 @@
 
                         <Entry Placeholder="Enter your Email"
                            Text="{Binding SignInEmail}"
-                           BackgroundColor="Transparent"
                            Keyboard="Email"
                            ClearButtonVisibility="WhileEditing"
                            TextColor="{AppThemeBinding Light=#000000, Dark=#FFFFFF}"
@@ -80,7 +89,8 @@
                        FontAttributes="Bold"
                        TextColor="{AppThemeBinding Light=#333333, Dark=#CCCCCC}"/>
 
-                    <Border StrokeShape="RoundRectangle 12"
+                    <Border Margin="0,0,0,10"
+                        StrokeShape="RoundRectangle 12"
                         Stroke="{AppThemeBinding Light=#E0E0E0, Dark=#333333}"
                         StrokeThickness="1"
                         BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1E1E1E}"
@@ -96,7 +106,8 @@
                            TextColor="{AppThemeBinding Light=#000000, Dark=#FFFFFF}"
                            PlaceholderColor="#888888"/>
 
-                            <Button Grid.Column="1"
+                            <Button Margin="5,0,0,0"
+                                    Grid.Column="1"
                                     Text="{Binding PassWordIconCode}"
                                     Command="{Binding TogglePassWordVisibilityCommand}"
                                     BackgroundColor="Transparent"
@@ -108,8 +119,6 @@
                                     FontFamily="MyMaterialIcons"/>
 
                         </Grid>
-
-
 
                     </Border>
 
