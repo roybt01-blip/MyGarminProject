@@ -11,7 +11,7 @@ namespace MyGarminProject
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new SignIn());
+            return new Window(new SignUp());
         }
     }
 }

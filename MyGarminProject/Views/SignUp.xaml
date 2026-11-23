@@ -3,154 +3,181 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyGarminProject.Views.SignUp"
              Title="SignUp">
-    
+
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
             <GradientStop Offset="0.0" Color="#004FF9"/>
             <GradientStop Offset="1.0" Color="#FFF94C"/>
         </LinearGradientBrush>
-
     </ContentPage.Background>
 
     <ScrollView>
-
-        <Grid RowDefinitions="* ,Auto, Auto, *"
-         Padding="28"
-         RowSpacing="24"
-         MaximumWidthRequest="450">
+        <Grid RowDefinitions="*, Auto, Auto, *"
+              Padding="28"
+              RowSpacing="24"
+              MaximumWidthRequest="450">
 
             <VerticalStackLayout Grid.Row="1" Spacing="8" HorizontalOptions="Center" VerticalOptions="Center">
-
-                <Label Text="Welcom back"
-                  FontSize="32"
-                  FontAttributes="Bold"
-                  TextColor="{AppThemeBinding Dark=#FFFFFF, Light=Gray}"/>
-                <Label Text="Sing in to continue to you account"
-                  FontSize="16"
-                  TextColor="{AppThemeBinding Light=#666666, Dark=#A0A0A0}"/>
+                <Label Text="Welcome"
+                       FontSize="32"
+                       FontAttributes="Bold"
+                       TextColor="{AppThemeBinding Dark=#FFFFFF, Light=Gray}"/>
+                <Label Text="Create an account"
+                       FontSize="16"
+                       TextColor="{AppThemeBinding Light=#666666, Dark=#A0A0A0}"/>
             </VerticalStackLayout>
 
             <VerticalStackLayout Grid.Row="2" Spacing="16">
 
-                <!--<VerticalStackLayout Spacing="6">
-
-                    <Label Text="Username"
-                      FontSize="14"
-                      FontAttributes="Bold"
-                      TextColor="{AppThemeBinding Light=#666666, Dark=#A0A0A0}"/>
-
-                    <Border Margin="0,0,0,10"
-                       StrokeShape="RoundRectangle 12"
-                       Stroke="{AppThemeBinding Light=#E0E0E0, Dark=#333333}"
-                       StrokeThickness="1"
-                       BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1E1E1E}"
-                       Padding="14,4">
-
-                        <Entry ReturnType="Go"
-                          Placeholder="Enter your Username"
-                          Text="{Binding SignUpUsername}"
-                          ClearButtonVisibility="WhileEditing"
-                          TextColor="{AppThemeBinding Light=#000000, Dark=#FFFFFF}"
-                          PlaceholderColor="#888888"/>
-                    </Border>
-
-                </VerticalStackLayouthgfhgfhgfh>-->
-
                 <VerticalStackLayout Spacing="6">
-
-                    <Label Text="Email"
-                      FontSize="14"
-                      FontAttributes="Bold"
-                      TextColor="{AppThemeBinding Light=#666666, Dark=#A0A0A0}"/>
-
-                    <Border Margin="0,0,0,10" 
-                       StrokeShape="RoundRectangle 12"
-                       Stroke="{AppThemeBinding Light=#E0E0E0, Dark=#333333}"
-                       StrokeThickness="1"
-                       BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1E1E1E}"
-                       Padding="14,4">
-
-                        <Entry Placeholder="Enter your Email"
-                          Text="{Binding SignUpEmail}"
-                          Keyboard="Email"
-                          ClearButtonVisibility="WhileEditing"
-                          TextColor="{AppThemeBinding Light=#000000, Dark=#FFFFFF}"
-                          PlaceholderColor="#888888"/>
+                    <Label Text="First Name"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="{AppThemeBinding Light=#666666, Dark=#A0A0A0}"/>
+                    <Border Margin="0,0,0,10"
+                            StrokeShape="RoundRectangle 12"
+                            Stroke="{AppThemeBinding Light=#E0E0E0, Dark=#333333}"
+                            StrokeThickness="1"
+                            BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1E1E1E}"
+                            Padding="14,4">
+                        <Entry ReturnType="Next"
+                               Placeholder="Enter your first name"
+                               Text="{Binding SignUpFirstName}"
+                               ClearButtonVisibility="WhileEditing"
+                               TextColor="{AppThemeBinding Light=#000000, Dark=#FFFFFF}"
+                               PlaceholderColor="#888888"/>
                     </Border>
-
                 </VerticalStackLayout>
 
                 <VerticalStackLayout Spacing="6">
-
-                    <Label Text="Password"
-                      FontSize="14"
-                      FontAttributes="Bold"
-                      TextColor="{AppThemeBinding Light=#333333, Dark=#CCCCCC}"/>
-
+                    <Label Text="Last Name"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="{AppThemeBinding Light=#666666, Dark=#A0A0A0}"/>
                     <Border Margin="0,0,0,10"
-                       StrokeShape="RoundRectangle 12"
-                       Stroke="{AppThemeBinding Light=#E0E0E0, Dark=#333333}"
-                       StrokeThickness="1"
-                       BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1E1E1E}"
-                       Padding="14,4">
-                        <Grid ColumnDefinitions="*, Auto">
+                            StrokeShape="RoundRectangle 12"
+                            Stroke="{AppThemeBinding Light=#E0E0E0, Dark=#333333}"
+                            StrokeThickness="1"
+                            BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1E1E1E}"
+                            Padding="14,4">
+                        <Entry ReturnType="Next"
+                               Placeholder="Enter your last name"
+                               Text="{Binding SignUpLastName}"
+                               ClearButtonVisibility="WhileEditing"
+                               TextColor="{AppThemeBinding Light=#000000, Dark=#FFFFFF}"
+                               PlaceholderColor="#888888"/>
+                    </Border>
+                </VerticalStackLayout>
 
+                <VerticalStackLayout Spacing="6">
+                    <Label Text="Email"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="{AppThemeBinding Light=#666666, Dark=#A0A0A0}"/>
+                    <Border Style="FormEntryBorder">
+                        <!--Margin="0,0,0,10"
+                            StrokeShape="RoundRectangle 12"
+                            Stroke="{AppThemeBinding Light=#E0E0E0, Dark=#333333}"
+                            StrokeThickness="1"
+                            BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1E1E1E}"
+                            Padding="14,4">-->
+                        <Entry ReturnType="Next"
+                               Placeholder="Enter your email"
+                               Text="{Binding SignUpEmail}"
+                               Keyboard="Email"
+                               ClearButtonVisibility="WhileEditing"
+                               TextColor="{AppThemeBinding Light=#000000, Dark=#FFFFFF}"
+                               PlaceholderColor="#888888"/>
+                    </Border>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="6">
+                    <Label Text="Phone number"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="{AppThemeBinding Light=#666666, Dark=#A0A0A0}"/>
+                    <Border Style="FormEntryBorder">
+                    <!--Margin="0,0,0,10"
+                            StrokeShape="RoundRectangle 12"
+                            Stroke="{AppThemeBinding Light=#E0E0E0, Dark=#333333}"
+                            StrokeThickness="1"
+                            BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1E1E1E}"
+                            Padding="14,4"--><!-->-->
+                        <Entry ReturnType="Next"
+                               Placeholder="Enter your phone number"
+                               Text="{Binding PhoneNumber}"
+                               Keyboard="Telephone"
+                               ClearButtonVisibility="WhileEditing"
+                               TextColor="{AppThemeBinding Light=#000000, Dark=#FFFFFF}"
+                               PlaceholderColor="#888888"/>
+                    </Border>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="6">
+                    <Label Text="Password"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="{AppThemeBinding Light=#333333, Dark=#CCCCCC}"/>
+                    <Border Style="FormEntryBorder">
+                    <!--Margin="0,0,0,10"
+                            StrokeShape="RoundRectangle 12"
+                            Stroke="{AppThemeBinding Light=#E0E0E0, Dark=#333333}"
+                            StrokeThickness="1"
+                            BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1E1E1E}"
+                            Padding="14,4">-->
+                        <Grid ColumnDefinitions="*, Auto">
                             <Entry Grid.Column="0"
-                          Placeholder="Enter your Password"
-                          Text="{Binding SignUpPassword}"
-                          BackgroundColor="Transparent"
-                          IsPassword="{Binding IsPasswordHidden}"
-                          ClearButtonVisibility="WhileEditing"
-                          TextColor="{AppThemeBinding Light=#000000, Dark=#FFFFFF}"
-                          PlaceholderColor="#888888"/>
+                                   ReturnType="Done"
+                                   Placeholder="Enter your password"
+                                   Text="{Binding SignUpPassword}"
+                                   BackgroundColor="Transparent"
+                                   IsPassword="{Binding IsPasswordHidden}"
+                                   ClearButtonVisibility="WhileEditing"
+                                   TextColor="{AppThemeBinding Light=#000000, Dark=#FFFFFF}"
+                                   PlaceholderColor="#888888"/>
 
                             <Button Margin="5,0,0,0"
-                                   Grid.Column="1"
-                                   Text="{Binding PassWordIconCode}"
-                                   Command="{Binding TogglePassWordVisibilityCommand}"
-                                   BackgroundColor="Transparent"
-                                   TextColor="{AppThemeBinding Light=#666666, Dark=#A0A0A0}"
-                                   FontSize="20"
-                                   Padding="0"
-                                   WidthRequest="40"
-                                   HeightRequest="40"
-                                   FontFamily="MyMaterialIcons"/>
-
+                                    Grid.Column="1"
+                                    Text="{Binding PassWordIconCode}"
+                                    Command="{Binding TogglePassWordVisibilityCommand}"
+                                    BackgroundColor="Transparent"
+                                    TextColor="{AppThemeBinding Light=#666666, Dark=#A0A0A0}"
+                                    FontSize="20"
+                                    Padding="0"
+                                    WidthRequest="40"
+                                    HeightRequest="40"
+                                    FontFamily="MyMaterialIcons"/>
                         </Grid>
-
                     </Border>
-
                 </VerticalStackLayout>
 
-                <Label FontSize="45"
-                      HorizontalTextAlignment="Center"
-                      IsVisible="{Binding SignUpMessageVisible}"
-                      Text="{Binding LoginMessage}"
-                      TextColor="{Binding SignUpMessageColor}"/>
-
-                <Button Text="Sign In"
-                       FontSize="20"
-                       IsEnabled="{Binding IsSignUpButtonEnabled}"
-                       Command="{Binding SignUpCommand}"
-                       BackgroundColor="#512BD4"
-                       TextColor="White"
+                <Label FontSize="15"
                        FontAttributes="Bold"
-                       CornerRadius="25"
-                       HeightRequest="52"
-                       Margin="0, 8, 0, 0">
+                       HorizontalTextAlignment="Center"
+                       IsVisible="{Binding SignUpMessageVisible}"
+                       Text="{Binding LoginMessage}"
+                       TextColor="{Binding SignUpMessageColor}"/>
+
+                <Button Text="Sign Up"
+                        FontSize="20"
+                        IsEnabled="{Binding IsSignUpButtonEnabled}"
+                        Command="{Binding SignUpCommand}"
+                        BackgroundColor="#512BD4"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="25"
+                        HeightRequest="52"
+                        Margin="0, 8, 0, 0">
                     <Button.Triggers>
                         <DataTrigger TargetType="Button"
-                    Binding="{Binding IsSignUpButtonEnabled}"
-                    Value="False">
+                                     Binding="{Binding IsSignUpButtonEnabled}"
+                                     Value="False">
                             <Setter Property="Opacity" Value="0.4" />
                         </DataTrigger>
                     </Button.Triggers>
                 </Button>
 
             </VerticalStackLayout>
-
         </Grid>
-
     </ScrollView>
-    
 </ContentPage>

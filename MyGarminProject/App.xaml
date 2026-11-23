@@ -8,6 +8,17 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                <ResourceDictionary>
+                    
+                    <Style x:Key="FormEntryBorder" TargetType="Border">
+                        <Setter Property="Margin" Value="0,0,0,10"/>
+                        <Setter Property="StrokeShape" Value="RoundRectangle 8"/>
+                        <Setter Property="Stroke" Value="{AppThemeBinding Light=#E0E0E0, Dark=#333333}"/>
+                        <Setter Property="StrokeThickness" Value="1"/>
+                        <Setter Property="Padding" Value="10"/>
+
+                    </Style>
+                </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
